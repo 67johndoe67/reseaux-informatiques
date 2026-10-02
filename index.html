@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Réseaux informatiques — Apprendre en s’amusant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+ <h1>Réseaux informatiques</h1>
+ <p>Topologies, périphériques, types de réseau, glossaire et quiz : un parcours interactif pour comprendre comment les données circulent.</p>
+ <div class="wire" aria-hidden="true"><i></i><i></i><i></i></div>
+</header>
+
+<nav aria-label="Navigation principale">
+ <a href="#topologies">Topologies</a>
+ <a href="#peripheriques">Périphériques</a>
+ <a href="#types">Types de réseau</a>
+ <a href="#glossaire">Glossaire</a>
+ <a href="#quiz">Quiz</a>
+ <div class="aud">
+  <button type="button" class="b" id="mus" aria-pressed="false">🔇 Musique : coupée</button>
+  <label>Volume <input type="range" id="vol" min="0" max="100" value="50"></label>
+ </div>
+</nav>
+
+<main>
+ <section id="topologies">
+  <h2>Les topologies réseau</h2>
+  <p class="lead">La topologie décrit la façon dont les appareils sont reliés entre eux. Les traits animés représentent la circulation des données.</p>
+  <div class="g" id="topo"></div>
+ </section>
+
+ <section id="peripheriques">
+  <h2>Les périphériques réseau</h2>
+  <p class="lead">Chaque appareil a un rôle précis. <b>Achemine</b> : choisit une route entre réseaux. <b>Commute</b> : oriente les trames dans un même réseau. <b>Transmet</b> : envoie ou répète le signal. <b>Filtre</b> : contrôle le trafic.</p>
+  <div class="g" id="dev"></div>
+ </section>
+
+ <section id="types">
+  <h2>Types et étendues de réseau</h2>
+  <p class="lead">Du plus petit au plus grand : la barre indique l’étendue relative de chaque type de réseau.</p>
+  <div class="g" id="net"></div>
+ </section>
+
+ <section id="glossaire">
+  <h2>Glossaire</h2>
+  <p class="lead"><label for="gf">Rechercher un terme :</label> <input type="search" id="gf" placeholder="ex. DNS, MAC, latence…"></p>
+  <div class="g" id="gl"></div>
+ </section>
+
+ <section id="quiz">
+  <h2>Quiz</h2>
+  <p class="lead">Choisissez une partie : une question à la fois, avec la bonne réponse et une explication.</p>
+  <div class="tabs">
+   <button type="button" class="b qt" data-k="topo">Topologies</button>
+   <button type="button" class="b qt" data-k="dev">Périphériques</button>
+   <button type="button" class="b qt" data-k="net">Types de réseau</button>
+  </div>
+  <div class="c" id="qbox"><p>Choisissez un quiz ci-dessus pour commencer.</p></div>
+ </section>
+</main>
+
+<footer>Mini-site pédagogique — fonctionne hors connexion. La musique ne démarre que si vous cliquez sur le bouton.</footer>
+<script src="script.js"></script>
+</body>
+</html>
